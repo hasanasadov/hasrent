@@ -1,6 +1,10 @@
 # Rent-a-Car Project
 
+
 Welcome to the **Rent-a-Car** project! This application is designed to streamline the process of renting vehicles by combining an intuitive front-end experience with a robust back-end system. It leverages the latest web technologies to provide users with an efficient, secure, and seamless experience.
+
+##### Front-end deployed on [hasrent.vercel.app](https://hasrent.vercel.app)
+##### Back-end deployed on [hasrent.onrender.com](https://hasrent.onrender.com)
 
 ---
 
@@ -89,27 +93,27 @@ Ensure you have the following installed:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/rent-a-car.git
+   git clone https://github.com/hasanasadov/hasrent.git
    cd rent-a-car
    ```
 
 2. Install dependencies for both frontend and backend:
    ```bash
-   cd backend
-   npm install
-   cd ../frontend
-   npm install
+   cd Server
+   pnpm install
+   cd ../client
+   pnpm install
    ```
 
 3. Start the development servers:
    ```bash
    # Backend
-   cd backend
-   npm start
+   cd Server
+   pnpm run start
 
    # Frontend
-   cd ../frontend
-   npm start
+   cd ../client
+   pnpm run dev
    ```
 
 4. Open the application in your browser at [http://localhost:5173](http://localhost:5173).
@@ -120,75 +124,16 @@ Ensure you have the following installed:
 
 Create a `.env` file in the `backend` folder and define the following variables:
 
-```env
-PORT=3000
-MONGO_URI=your_mongodb_connection_string
-JWT_SECRET=your_jwt_secret
-GOOGLE_CLIENT_ID=your_google_client_id
-GOOGLE_CLIENT_SECRET=your_google_client_secret
-GITHUB_CLIENT_ID=your_github_client_id
-GITHUB_CLIENT_SECRET=your_github_client_secret
-EMAIL_HOST=your_email_host
-EMAIL_USER=your_email_user
-EMAIL_PASS=your_email_password
-```
-
----
 
 ## Scripts
 
 ### Backend
-- **`npm start`**: Start the server.
-- **`npm run dev`**: Start the server in development mode.
+- **`pnpm run start`**: Start the server.
+- **`pnpm run dev`**: Start the server in development mode.
 
 ### Frontend
-- **`npm start`**: Start the development server.
-- **`npm run build`**: Build the production version.
-
----
-
-## Folder Structure
-
-### Backend
-```
-backend/
-├── controllers/
-├── models/
-├── routes/
-├── utils/
-├── middlewares/
-├── .env
-└── server.js
-```
-
-### Frontend
-```
-frontend/
-├── src/
-│   ├── components/
-│   ├── pages/
-│   ├── hooks/
-│   ├── store/
-│   └── utils/
-├── public/
-└── package.json
-```
-
----
-
-## API Endpoints
-
-### Authentication
-- **POST** `/auth/login` - Login a user.
-- **POST** `/auth/register` - Register a new user.
-
-### Cars
-- **GET** `/cars` - Fetch all available cars.
-- **POST** `/cars` - Add a new car.
-
-### Bookings
-- **GET** `/bookings` - Fetch user bookings.
-- **POST** `/bookings` - Create a new booking.
+- **`pnpm run dev`**: Start the development server.
+- **`pnpm run build`**: Build the production version.
 
 ---
 
